@@ -188,7 +188,7 @@ const token = storage.read<string>('user-token');
 
 ### Contributing 🤝
 
-Contributions are welcome! Please see our contribution guidelines.
+Contributions are welcome! Please see our [contribution guidelines](https://github.com/riad804/getx-npm).
 
 ---
 
