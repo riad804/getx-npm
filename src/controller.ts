@@ -20,24 +20,3 @@ export abstract class GetXController {
         this._isInitialized = false;
     }
 }
-
-// Example controller implementation
-export class CounterController extends GetXController {
-    count = new Rx<number>(0);
-
-    increment() {
-        this.count.value += 1;
-    }
-
-    decrement() {
-        this.count.value -= 1;
-    }
-
-    onInit() {
-        console.log('CounterController initialized');
-    }
-
-    onClose() {
-        console.log('CounterController disposed');
-    }
-}
