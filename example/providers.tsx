@@ -1,8 +1,9 @@
 'use client';
 import {useEffect} from "react";
-import {themeService} from "../src/theme";
-import {translation} from "../src/translation";
+import {themeService, translation} from "../src";
+// @ts-ignore
 import {ThemeProvider} from "./ThemeProvider";
+// @ts-ignore
 import {SnackbarWrapper} from "./SnackbarWrapper";
 
 export function Providers({ children }: { children: React.ReactNode }) {

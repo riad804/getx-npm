@@ -1,8 +1,8 @@
-// components/ThemeProvider.tsx
 'use client';
 
 import { useEffect } from 'react';
-import {useTheme} from "../src/theme";
+import {useTheme} from "../src";
+import * as React from "react";
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const { theme } = useTheme();

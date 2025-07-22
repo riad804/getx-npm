@@ -1,8 +1,6 @@
 'use client';
 
-
-import {useRx} from "../src/state";
-import {snackbar} from "../src/snackbar";
+import {snackbar, SnackType, useRx} from "../src";
 
 export function SnackbarWrapper() {
     const messages = useRx(snackbar['_messages']);
@@ -13,9 +11,9 @@ export function SnackbarWrapper() {
                 <div
                     key={msg.id}
                     className={`p-4 rounded shadow-lg ${
-                        msg.type === 'success' ? 'bg-green-500' :
-                            msg.type === 'error' ? 'bg-red-500' :
-                                msg.type === 'warning' ? 'bg-yellow-500' : 'bg-blue-500'
+                        msg.type === SnackType.SUCCESS ? 'bg-green-500' :
+                            msg.type === SnackType.ERROR ? 'bg-red-500' :
+                                msg.type === SnackType.WARNING ? 'bg-yellow-500' : 'bg-blue-500'
                     } text-white`}
                     onClick={() => snackbar.removeMessage(msg.id)}
                 >
@@ -29,7 +27,7 @@ export function SnackbarWrapper() {
 // Example usage
 function SomeComponent() {
     const handleAction = () => {
-        snackbar.show('Action completed successfully!', 'success');
+        snackbar.show('Action completed successfully!', SnackType.SUCCESS);
     };
 
     return (

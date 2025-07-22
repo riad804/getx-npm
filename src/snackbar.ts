@@ -3,10 +3,17 @@
 import { Rx } from './state';
 import {GetXController} from "./controller";
 
+export enum SnackType {
+    SUCCESS,
+    ERROR,
+    INFO,
+    WARNING,
+}
+
 type SnackbarMessage = {
     id: string;
     message: string;
-    type: 'success' | 'error' | 'warning' | 'info';
+    type: SnackType;
     duration?: number;
 };
 
@@ -17,7 +24,7 @@ class SnackbarService extends GetXController {
         return this._messages.value;
     }
 
-    show(message: string, type: SnackbarMessage['type'] = 'info', duration = 3000) {
+    show(message: string, type: SnackbarMessage['type'] = SnackType.INFO, duration = 3000) {
         const newMessage: SnackbarMessage = {
             id: Math.random().toString(36).substring(2, 9),
             message,

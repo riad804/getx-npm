@@ -3,7 +3,7 @@
 import {GetXController} from "./controller";
 import {Rx, useRx} from "./state";
 
-type Theme = {
+export type Theme = {
     name: string;
     colors: {
         primary: string;

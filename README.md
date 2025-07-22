@@ -61,12 +61,9 @@ const scopedService = find(UserService, 'user-profile');
 ### Usage Examples 🛠️
 
 #### 1. Basic Counter
-please Ensure the imports from dist folder
-next-getx/dist/
+
 ```tsx
 // counter.controller.ts
-import {} from "next-getx/dist/dipendency.ts"
-
 export class CounterController extends GetxController {
   count = new Rx<number>(0);
 
