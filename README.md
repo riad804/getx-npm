@@ -163,14 +163,14 @@ const token = storage.read<string>('user-token');
 ### API Reference 📚
 
 | Feature          | Import Path              | Description                  |
-| ---------------- | ------------------------ | ---------------------------- |
-| `Rx`             | `@/lib/getx/state`       | Reactive state container     |
-| `GetxController` | `@/lib/getx/controller`  | Base controller class        |
-| `put` / `find`   | `@/lib/getx/dependency`  | Dependency injection         |
-| `translation`    | `@/lib/getx/translation` | Internationalization service |
-| `themeService`   | `@/lib/getx/theme`       | Theme management             |
-| `snackbar`       | `@/lib/getx/snackbar`    | Notification service         |
-| `storage`        | `@/lib/getx/storage`     | Persistent storage           |
+| ---------------- |--------------------------| ---------------------------- |
+| `Rx`             | `@/lib/next-getx/state`  | Reactive state container     |
+| `GetxController` | `@/lib/next-getx/controller`  | Base controller class        |
+| `put` / `find`   | `@/lib/next-getx/dependency`  | Dependency injection         |
+| `translation`    | `@/lib/next-getx/translation` | Internationalization service |
+| `themeService`   | `@/lib/next-getx/theme`       | Theme management             |
+| `snackbar`       | `@/lib/next-getx/snackbar`    | Notification service         |
+| `storage`        | `@/lib/next-getx/storage`     | Persistent storage           |
 
 ---
 
